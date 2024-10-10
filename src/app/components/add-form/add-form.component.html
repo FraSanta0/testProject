@@ -1,0 +1,30 @@
+<div class="w-full h-screen bg-white">
+    <div class="container mx-auto w-full h-1/6 bg-gray-400">
+        <div class="container mx-auto w-full h-3/6">
+            <div class="container w-12 h-12 bg-red-500">
+                <button class="w-full h-full" (click)="menu()"></button>
+            </div>
+        </div>
+        <div class="container mx-auto w-full h-3/6 py-3 px-4">
+            <input type="text" class="w-full rounded-lg mx-auto">
+        </div>
+    </div>
+
+    <div class="container mx-auto w-5/6 h-full py-4">
+        <form  [formGroup]="ShirtForm" (ngSubmit)="onSubmit()">
+            <label class="mr-2">TEAM</label>
+            <input type="text" id="team" formControlName="team" class="border-2 border-slate-400 rounded-lg w-full">
+            <label class="mr-2">YEAR</label>
+            <input type="text" formControlName="year" class="border-2 border-slate-400 rounded-lg w-full">
+            <label class="mr-2">SIZE</label>
+            <input type="text" formControlName="size" class="border-2 border-slate-400 rounded-lg w-full">
+            <label class="mr-2">TYPE</label>
+            <input type="text" formControlName="type" class="border-2 border-slate-400 rounded-lg w-full">
+            <label class="mr-2">BRAND</label>
+            <input type="text" formControlName="brand" class="border-2 border-slate-400 rounded-lg w-full">
+            <label class="mr-2">PRICE</label>
+            <input type="text" formControlName="price" class="border-2 border-slate-400 rounded-lg w-full">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
