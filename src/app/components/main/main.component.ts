@@ -1,8 +1,8 @@
 import { Component, OnInit,ViewEncapsulation } from '@angular/core';
 import { HttpClientModule,HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Shirt } from '/Users/santa/VisualStudioProjects/test/testProject/src/app/components/shirts.interface';
 import { Router } from '@angular/router';
+import {Shirt} from '../shirts.interface';
 
 @Component({
   selector: 'app-main',
