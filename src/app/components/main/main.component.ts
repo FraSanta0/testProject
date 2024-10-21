@@ -23,9 +23,10 @@ export class MainComponent implements OnInit{
   ){}
 
   ngOnInit(): void {
+    console.log("ciao");
     this.getShirts().subscribe(response => {
       this.testData=response;
-      console.log(this.testData.body);
+      console.log(this.testData);
     })
   }
 
@@ -35,5 +36,9 @@ export class MainComponent implements OnInit{
 
   menu(): void{
     this.router.navigate(['/add']);
+  }
+
+  menu2(): void{
+    console.log(this.testData);
   }
 }
