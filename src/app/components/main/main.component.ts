@@ -23,11 +23,14 @@ export class MainComponent implements OnInit{
   ){}
 
   ngOnInit(): void {
-    console.log("ciao");
-    this.getShirts().subscribe(response => {
-      this.testData=response;
-      console.log(this.testData);
-    })
+    if(this.testData==null){
+      this.getShirts().subscribe(response => {
+        this.testData=response;
+        this.testData=this.testData.body;
+        console.log(this.testData);
+      })
+    }
+    
   }
 
   getShirts(): Observable<Shirt[]> {
@@ -36,9 +39,5 @@ export class MainComponent implements OnInit{
 
   menu(): void{
     this.router.navigate(['/add']);
-  }
-
-  menu2(): void{
-    console.log(this.testData);
   }
 }
