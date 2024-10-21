@@ -33,7 +33,7 @@ export class AddFormComponent {
   }
 
   onSubmit() {
-    const apiUrl = 'http://santaniellofrancesco.altervista.org/test/api/create_shirt.php';
+    const apiUrl = 'https://santaniellofrancesco.altervista.org/test/api/create_shirt.php';
     const formData = this.ShirtForm.value;
 
     this.http.post(apiUrl, formData).subscribe(response => {

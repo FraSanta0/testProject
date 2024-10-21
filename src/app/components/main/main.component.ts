@@ -14,7 +14,7 @@ import {Shirt} from '../shirts.interface';
 })
 export class MainComponent implements OnInit{
 
-  private allShirtsUrl = "http://santaniellofrancesco.altervista.org/test/api/read_shirts.php";
+  private allShirtsUrl = "https://santaniellofrancesco.altervista.org/test/api/read_shirts.php";
   testData: any;
 
   constructor(
