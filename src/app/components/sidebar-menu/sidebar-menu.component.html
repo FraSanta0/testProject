@@ -1,0 +1,18 @@
+@if(isOpen){
+    <div class="fixed inset-0 flex z-50 w-4/6">
+        <div class="fixed inset-0 bg-gray-600 bg-opacity-75" (click)="toggleMenu()"></div>
+        <div class="relative bg-white w-64 h-full shadow-xl pt-4 transform transition-transform ease-in-out duration-700"
+             [class.-translate-x-full]="!isOpen">
+          <h2 class="text-lg font-bold">Menu</h2>
+          <div class="container h-full w-full">
+            <div class="w-full h-14">
+                <button class="w-full h-full bg-slate-200 border-2 border-y-slate-400 text-left" (click)="menuHome()">Home</button>
+            </div>
+            <div class="w-full h-14">
+                <button class="w-full h-full bg-slate-200 border-2 border-b-slate-400 text-left" (click)="menuAdd()">Add Shirt</button>
+            </div>
+          </div>
+        </div>
+      </div>
+}
+  

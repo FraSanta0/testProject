@@ -39,6 +39,7 @@ export class AddFormComponent {
     this.http.post(apiUrl, formData).subscribe(response => {
       console.log(response);
     });
+    this.router.navigate(['/']);
   }
 
 }

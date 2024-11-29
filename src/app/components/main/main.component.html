@@ -1,15 +1,6 @@
-<div class="w-full h-screen bg-white">
-    <div class="container mx-auto w-full h-1/6 bg-gray-400">
-        <div class="container mx-auto w-full h-3/6 flex">
-            <div class="container w-12 h-12 bg-red-500">
-                <button class="w-full h-full" (click)="menu()"></button>
-            </div>
-        </div>
-        <div class="container mx-auto w-full h-3/6 py-3 px-4">
-            <input type="text" class="w-full rounded-lg mx-auto">
-        </div>
-    </div>
-    <div class=" flex flex-wrap mx-auto w-full h-5/6 rounded-b-lg px-6 py-4 overscroll-contain overflow-y-auto ">
+
+    
+    <div class=" flex flex-wrap mx-auto w-full h-5/6 rounded-b-lg px-6 py-4 md:mx-12 overscroll-contain overflow-y-auto ">
         
         @for (s of this.testData; track s.ID_shirt){
             <div class="flex w-40 md:w-48 h-60 px-2 pb-4">
@@ -22,4 +13,3 @@
             </div> 
         }
     </div>
-</div>
