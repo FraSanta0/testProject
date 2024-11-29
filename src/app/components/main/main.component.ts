@@ -40,4 +40,8 @@ export class MainComponent implements OnInit{
   menu(): void{
     this.router.navigate(['/add']);
   }
+
+  openSingle(): void{
+    console.log("cliccato");
+  }
 }
