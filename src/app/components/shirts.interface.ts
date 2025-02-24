@@ -7,6 +7,7 @@ export interface Shirt {
     size:string;
     type:string;
     brand:string;
+    img:string;
     price:string;
   }
   

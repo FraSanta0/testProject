@@ -1,0 +1,46 @@
+<div class="container mx-auto w-5/6 md:w-3/6 h-full py-4 pt-36">
+    <h1>UPDATE SHIRT {{shirt.ID_shirt}}</h1>
+    <form  [formGroup]="ShirtForm" (ngSubmit)="onSubmit()">
+        <div class="container w-full">
+            <label class="mr-2">ID</label>
+        </div>
+        <input type="text" id="ID_shirt" formControlName="ID_shirt" class="border-2 border-slate-400 rounded-lg w-full" readonly>
+        <div class="container w-full">
+            <label class="mr-2">TEAM</label>
+        </div>
+        <input type="text" id="team" formControlName="team" class="border-2 border-slate-400 rounded-lg w-full">
+        <div class="container w-full">
+            <label class="mr-2">YEAR</label>
+        </div>
+        <input type="text" formControlName="year" class="border-2 border-slate-400 rounded-lg w-full">
+        <div class="container w-full">
+            <label class="mr-2">SIZE</label>
+        </div>
+        <select formControlName="size" class="border-2 border-slate-400 rounded-lg w-12">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+        </select>
+        <div class="container w-full">
+            <label class="mr-2">TYPE</label>
+        </div>
+        <input type="text" formControlName="type" class="border-2 border-slate-400 rounded-lg w-full">
+        <div class="container w-full">
+            <label class="mr-2">BRAND</label>
+        </div>
+        <input type="text" formControlName="brand" class="border-2 border-slate-400 rounded-lg w-full">
+        <div class="container w-full">
+            <label class="mr-2">IMG LINK</label>
+        </div>
+        <input type="text" formControlName="img" class="border-2 border-slate-400 rounded-lg w-full">
+        <div class="container w-full">
+            <label class="mr-2">PRICE</label>
+        </div>
+        <div class="container w-full">
+            <input type="text" formControlName="price" class="border-2 border-slate-400 rounded-lg w-full">
+        </div>
+        <div class="container w-full mt-2">
+            <button type="submit" class="border-2 border-slate-400 rounded-lg bg-slate-200 w-16 h-8">Submit</button>
+        </div>
+    </form>
+</div>

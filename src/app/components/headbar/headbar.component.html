@@ -1,18 +1,42 @@
 <div class="w-full h-screen bg-white">
     <div class="container absolute mx-auto w-full h-1/6 bg-gray-400">
-        <div class="container mx-auto w-full h-3/6 flex">
-            <div class="container w-12 h-12 bg-gray-400">
-                <button class="w-full h-full p-1" (click)="sidebarMenu.toggleMenu()">
+        <div class="container flex mx-auto w-full h-3/6 flex">
+            <div class="container w-1/12 h-full bg-gray-400">
+                <button class="w-full h-full pr-8" (click)="sidebarMenu.toggleMenu()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="full" height="full" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
                       </svg>
                 </button> 
             </div>
+            <div class="container w-10/12 h-full bg-gray-400">
+            </div>
+            <div class="container flex w-1/12 h-full bg-gray-400">
+                <div class="container w-1/2 h-12/12">
+                    @if(username!=''){
+                        <button class="w-full h-full ml-3" (click)="logout()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                              </svg>
+                        </button>
+                    }
+                    @else {
+                        <button class="w-full h-full ml-3" (click)="sidebarMenu.login()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                              </svg>
+                        </button>
+                    }
+                </div>
+                <div class="w-1/2 h-2/12 pr-8 my-auto text-center">
+                    @if(username!=''){Logout}
+                    @else {Login}
+                </div>
+            </div>
         </div>
-        <div class="container mx-auto w-full h-3/6 py-3 pl-4 pr-8">
-            <input type="text" class="w-full rounded-lg mx-auto">
+        <div class="container flex mx-auto w-full h-3/6 py-3 pl-4 pr-8">
+            <input type="text" id="search" class="w-11/12 rounded-lg mx-auto"><button class="w-1/12 rounded-lg" (click)="search()">search</button>
         </div>
     </div>
     <app-sidebar-menu #sidebarMenu></app-sidebar-menu>
-    <router-outlet></router-outlet>
+    <router-outlet #main></router-outlet>
 </div>

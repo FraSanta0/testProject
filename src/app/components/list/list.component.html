@@ -1,0 +1,25 @@
+<div class="container mx-auto w-5/6 md:w-3/6 h-full py-4 pt-36">
+    <div class="container w-full h-full overflow-auto bg-gray-400 pt-5">
+        <table class="w-full">
+            <thead>
+                <tr class="bg-slate-200 h-8">
+                    <td class="rounded-tl-lg">CODICE</td>
+                    <td>TEAM</td>
+                    <td>MODIFICA</td>
+                    <td class="rounded-tr-lg">ELIMINA</td>
+                </tr>
+            </thead>
+            <tbody>
+                @for (s of this.testData; track s.ID_shirt){
+                    <tr class="bg-slate-200 h-8 border border-solid border-blue-400">
+                        <td class="my-2">{{s.ID_shirt}}</td>
+                        <td class="my-2">{{s.team}}</td>
+                        <td><button class="my-2 rounded-lg bg-slate-400 w-20 h-7" (click)="openUpdate(s.ID_shirt)">modifica</button></td>
+                        <td><button class="my-2 rounded-lg bg-slate-400 w-20 h-7" (click)="deleteshirt(s.ID_shirt)">elimina</button></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

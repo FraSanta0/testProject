@@ -1,0 +1,51 @@
+<div class="container pt-36 w-8/12 h-full mx-auto">
+
+    @if(loginstate){
+        <div class="container w-1/2 h-1/6 mx-auto border-x border-t border-solid border-slate-700">
+            <div class="px-52 text-2xl pt-8">LOGIN</div>
+        </div>
+        <div class="container w-1/2 h-3/6 mx-auto border-x border-solid border-slate-700">
+            <form [formGroup]="loginform" (ngSubmit)="login($event)">
+                <label for="mail" class="ml-10">MAIL:</label><br>
+                <input type="text" id="mail" formControlName="mail" class="ml-10 mb-5 w-10/12 mx-auto rounded-lg border border-solid border-slate-700">
+                <label for="mail" class="ml-10">PASSWORD:</label><br>
+                <input type="password" id="password" formControlName="password" class="ml-10 mb-5 w-10/12 mx-auto rounded-lg border border-solid border-slate-700"><br>
+                <button class="w-20 ml-52 mb-5 border border-solid border-b-slate-700 rounded-lg mx-auto" type="submit">login</button>
+                <div class="container w-10/12 mx-auto">
+                    non sei registrato? <a (click)="register()" class="cursor-pointer underline text-cyan-400">registrati</a> 
+                </div>
+                
+            </form>
+        </div>
+        <div class="container w-1/2 h-1/6 mx-auto border-x border-b border-solid border-slate-700">
+            @if(failurestate){
+                <div class="container w-10/12 mx-auto">
+                    <p class="text-red-600">password o mail sbagliata</p>
+                </div>
+            }
+        </div>
+    }@else{
+        @if(registerstate){
+            <div class="container w-1/2 h-1/6 mx-auto border-x border-t border-solid border-slate-700">
+                <div class="px-48 text-2xl pt-8">REGISTRATI</div>
+            </div>
+            <div class="container w-1/2 h-3/6 pl-10 mx-auto border-x border-solid border-slate-700">
+                <form [formGroup]="registerform" (ngSubmit)="submitRegister($event)">
+                    <label for="mail" class="mb-5">MAIL:<br></label><input type="text" id="mail" formControlName="mail" class="mb-5 w-10/12 mx-auto rounded-lg border border-solid border-slate-700">
+                    <label for="username" class="mb-5">USERNAME:</label><input type="text" id="username" formControlName="username" class="mb-5 w-10/12 mx-auto rounded-lg border border-solid border-slate-700">
+                    <label for="password" class="mb-5">PASSWORD:</label><input type="text" id="password" formControlName="password" class="mb-5 w-10/12 mx-auto rounded-lg border border-solid border-slate-700">
+                    <button class="w-20 ml-40 mb-5 border border-solid border-b-slate-700 rounded-lg mx-auto" type="submit">registrati</button>
+                    
+                </form>
+            </div>
+            <div class="container w-1/2 h-1/6 mx-auto border-x border-b border-solid border-slate-700">
+                @if(registerDone){
+                    <div class="container w-10/12 mx-auto">
+                        <p class="text-green-500">registrazione avvenuta con successo</p>
+                    </div>
+                }
+            </div>
+        }
+    }
+
+</div>

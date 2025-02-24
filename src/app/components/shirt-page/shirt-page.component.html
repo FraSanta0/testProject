@@ -1,4 +1,24 @@
-<div class="container flex w-11/12 h-full mx-auto">
-    <div class="w-7/12 h-full bg-red-700">a</div>
-    <div class="w-5/12 h-full bg-green-500">b</div>
+<div class="container flex w-11/12 h-full mx-auto pt-36">
+    <div class="w-7/12 h-full border-2 border-solid"><img class="w-full h-full" src={{shirtData.img}} alt=""></div>
+    <div class="w-5/12 h-full border-2 border-solid">
+        <div class="container w-full h-1/5 pt-10">
+            <p class="h-full w-full text-4xl text-center">{{shirtData.team}} {{shirtData.year}}</p>
+        </div>
+        <div class="container flex w-full h-1/5 pt-10">
+            <div class="container flex w-1/2">
+                <p class="h-full w-full text-4xl text-center">taglia: {{shirtData.size}} </p>
+            </div>
+            <div class="container flex w-1/2">
+                <p class="h-full w-full text-4xl text-center">tipo: {{shirtData.type}} </p>
+            </div>
+        </div>
+        <div class="container flex w-full h-1/5 pt-10">
+            <div class="container flex w-1/2">
+                <p class="h-full w-full text-4xl text-center">brand: {{shirtData.brand}} </p>
+            </div>
+            <div class="container flex w-1/2">
+                <p class="h-full w-full text-4xl text-center">prezzo: {{shirtData.price}} </p>
+            </div>
+        </div>
+    </div>
 </div>

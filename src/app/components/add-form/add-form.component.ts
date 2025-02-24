@@ -24,6 +24,7 @@ export class AddFormComponent {
       size: new FormControl(''),
       brand: new FormControl(''),
       type: new FormControl(''),
+      img: new FormControl(''),
       price: new FormControl(''),
     });
   }
@@ -35,11 +36,14 @@ export class AddFormComponent {
   onSubmit() {
     const apiUrl = 'https://santaniellofrancesco.altervista.org/test/api/create_shirt.php';
     const formData = this.ShirtForm.value;
+    console.log(formData);
 
     this.http.post(apiUrl, formData).subscribe(response => {
       console.log(response);
     });
-    this.router.navigate(['/']);
+    setTimeout(() => {
+      this.router.navigate(['/']);
+    }, 1000);
   }
 
 }
